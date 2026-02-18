@@ -1,4 +1,8 @@
 
+/*======================================*/
+          // 1 - 10 FUNCTIONS
+/*======================================*/
+
 // return a number
 function getNumber() {
     return 42;
@@ -29,7 +33,7 @@ function getNothing() {
     return null;
 }
 // - return undefined
-function giveUndefinedValue() {
+function getUndefinedValue() {
     
 }
 // - return a function
@@ -46,7 +50,9 @@ function getName() {
 }
 
 
-
+/*======================================*/
+          // 11 - 20 FUNCTIONS
+/*======================================*/
 
 // return today's Date
 function dateToday() {
@@ -107,7 +113,10 @@ function greetGuest(greeting) {
     let welcome = greeting.greet("Javor");
     console.log(welcome);
 
-// 21 - 30 FUNCTION DRILLS
+
+/*======================================*/
+          // 21 - 30 FUNCTIONS
+/*======================================*/
 
 // returns a string
 function getHello() {
@@ -163,7 +172,10 @@ function getFirstElement(arr) {
     return arr[0];
 }
 
-// 31 - 40 FUNCTION DRILLS
+
+/*======================================*/
+          // 31 - 40 FUNCTIONS
+/*======================================*/
 
 function getSquare(num) {
     return num * num;
@@ -231,4 +243,136 @@ function getAddFunction(num) {
     return (x) => num + x; 
 }
 
+
+/*======================================*/
+          // 41 - 50 FUNCTIONS
+/*======================================*/
+
+
+function getLongestWord(sentence) {
+    let arr = sentence.split(" ");
+    let longestWord = arr[0];
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i].length > longestWord.length) {
+            longestWord = arr[i];
+        }
+    }
+
+    return longestWord;
+}
+
+function createArrayOfEvenNumbers(num) {
+    let arr = [];
+    for(let i = 0; i <= num; i++) {
+        if(i % 2 === 0) arr.push(i)
+    }
+  return arr;
+}
+// 
+function removeDuplicatesFromArray(arr) {
+    let uniqueArr = [];
+    
+    for(let i = 0; i < arr.length; i++) {
+        if(!uniqueArr.includes(arr[i])) {
+            uniqueArr.push(arr[i]);
+        }
+    }
+
+    return uniqueArr;
+    }
+
+    function createLetterCountObject(str) {
+        return str
+        .split("")
+        .reduce((acc, curr) => {
+            acc[curr] = acc[curr] ?? 0;
+            acc[curr]++;
+            return acc;
+        }, {});
+    }
+
+    function checkCommonElements(arr1, arr2) {
+        if(arr1.length === 0 || arr2.length === 0) return "Arrays shouldn't be empty";
+
+        for(let i = 0; i < arr2.length; i++) {
+               if(arr1.includes(arr2[i])) {
+                return true;
+               }
+        }
+        return false;
+    }
+
+
+    function getFactorial(num) {
+        let product = 1;
+        for(let i = 1; i <= num; i++) {
+            product *= i;
+        }
+
+        return product;
+    }
+
+
+    function getSecondLargestNumber(numbers) {
+        const sortedNumber = [...numbers].sort((a, b) => a - b); 
+
+        return sortedNumber[sortedNumber.length - 2];
+    }
+
+
+    function getEveryOtherLetterCapitalized(str) {
+        
+        return str.split("").map((el, index) => {
+            if(index % 2 !== 0) {
+             return   el.toUpperCase()
+            }
+            return el.toLowerCase();
+        }).join("");
+    }
+
+
+
+    function getRandomOrderArrayElement(arr) {
+        
+        let newArr = [];
+        while(newArr < arr.length) {
+            let index = Math.floor(Math.random() * arr.length);
+            if(!newArr.includes(arr[index])) {
+                newArr.push(arr[index]);
+            }
+            
+        }
+
+        return newArr;
+    }
+
+    function getFunctionRunningOriginalFunctionNumberTimes(fn, times) {
+        // I'm beaten by this challenge
+        return () => {
+            let results = [];
+            for(let i = 0; i < times; i++) {
+                results.push(fn());
+        }
+        return results;
+    }
+}
+    
+    // Bonus challenge
+
+    function analyzeLongestWord(sentence) {
+        let wordsArray = sentence.split(" ");
+
+        let longestWord = wordsArray[0];
+        
+        for(let i = 0; i < wordsArray.length; i++) {
+            if(wordsArray[i].length > longestWord.length) {
+                longestWord = wordsArray[i];
+            }
+        }
+        return {
+            word: longestWord,
+            letterCount: longestWord.length
+        }
+    }
 
