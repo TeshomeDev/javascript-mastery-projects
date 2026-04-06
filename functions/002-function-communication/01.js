@@ -1,0 +1,80 @@
+
+/* ============================ */
+      // SENTENCE PROCESSOR
+/* ============================ */
+
+function reverseString(str) {
+  return str.trim().split("").reverse().join("");
+}
+
+function turnToUpperCase(str) {
+  return str.trim().toUpperCase();
+}
+
+function countVowels(str) {
+
+  const vowels = "aeiouAEIOU";
+  let count = 0;
+
+  for(let i = 0; i < str.length; i++) {
+    if(vowels.includes(str[i])) {
+      count++;
+    }
+  }
+  return count;
+}
+
+function getLongestWord(sentence) {
+
+  const arr = sentence.split(" ");
+  if(!sentence.trim()) return {error: "Sentence can't be empty"};
+  let longestWord = arr[0];
+
+for(let i = 0; i < arr.length; i++) {
+  if(arr[i].length > longestWord.length) {
+    longestWord = arr[i];
+  }
+}
+
+return {
+  word: longestWord,
+  letterCount: longestWord.length
+}
+}
+
+function createReport(original, processed, vowelCount, letterCount) {
+  return {
+    "Original word": original,
+    "Processed word": processed,
+    "Vowel count": vowelCount,
+    "Letter count": letterCount
+  }
+}
+
+const wordObject = getLongestWord("JavaScript is awesome");
+
+if(wordObject.error) {
+  console.log(wordObject.error);
+} else {
+  const reversedWord = reverseString(wordObject.word);
+
+const wordCapitalized = turnToUpperCase(reversedWord);
+
+const vowelCount = countVowels(wordCapitalized);
+
+const report = createReport(
+  wordObject.word, 
+  wordCapitalized, 
+  vowelCount,
+  wordObject.letterCount
+);
+
+console.log(`The Processed Sentence Result`);
+console.log(`The longest word reversed and capitalized: ${wordCapitalized}`);
+console.log(`Number of vowels in the longest word: ${vowelCount}`);
+console.table(report);
+}
+
+
+
+
