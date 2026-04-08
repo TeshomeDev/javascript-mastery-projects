@@ -1,0 +1,30 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container__title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .container__btn {
+      border: none;
+      padding: 0.5rem 1rem;
+      background-color: #037ae3;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 0.25rem;
+      transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #0456d0;
+        }
+    }
