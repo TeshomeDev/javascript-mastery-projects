@@ -1,6 +1,8 @@
 
 :root {
---text-unit: 0.25rem;
+--space-unit: 0.25rem;
+
+--font-base: clamp(1rem, 0.5rem + 1vw, 1.5rem);
 
   --h: 210;
   --s: 70%;
@@ -16,10 +18,15 @@
   --box-shadow: hsla(var(--h), var(--s), 15%, 0.5);
 
 
-  --text-1: calc(var(--text-unit) * 3);
-  --text-2: calc(var(--text-unit) * 4);
-  --text-3: calc(var(--text-unit) * 6);
-  --text-4: calc(var(--text-unit) * 8);
+  --text-1: var(--font-base);
+  --text-2: calc(var(--font-base) * 1.5);
+  --text-3: calc(var(--font-base) * 2);
+  --text-4: calc(var(--font-base) * 2.5);
+
+  --space-1: var(var(--space-unit));
+  --space-2: calc(var(--space-unit) * 2);
+  --space-3: calc(var(--space-unit) * 3);
+  --space-4: calc(var(--space-unit) * 4);
 
 
   /* Tokens */
@@ -34,6 +41,12 @@
   --text-md: var(--text-3);
   --text-lg: var(--text-4);
 
+  --space-xs: var(--space-1);
+  --space-sm: var(--space-2);
+  --space-md: var(--space-3);
+  --space-lg: var(--space-4);
+
+
   --shadow: var(--box-shadow);
 
   --container-radius: 0.5rem;
@@ -47,7 +60,7 @@
 }
 
 html {
-  font-size: clamp(1rem, 0.5rem + 1vw, 1.2rem);
+  font-size: var(--font-base);
 }
 
 .container {
@@ -57,12 +70,11 @@ html {
   height: 100vh;
   background-color: var(--main-bg);
   font-size: var(--text-base);
-  
+  padding: var(--space-lg);
 }
 
 .container__content {
-  max-width: 20rem;
-  padding: 1rem;
+  padding: var(--space-lg);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,25 +93,29 @@ html {
 }
 
 .container__title {
-  font-size: 2rem;
+  font-size: var(--text-md);
   color: var(--text-color-primary);
+  flex: 1 1 0;
 }
 
 .container__counter-btn {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
 }
 
 .container__btn-inc {
-  width: 6rem;
-  padding: 0.125rem 0.8rem;
+  width: 100%;
+  padding: var(--space-xs) var(--space-sm);;
   background-color: var(--primary);
   color: var(--primary-light);
   font-size: 1.5rem;
   font-weight: bold;
   border: none;
   transition: transform 0.1s ease-out;
+
+  flex: 1 1 0;
   
   &:active {
     transform: translateY(2px);
@@ -108,14 +124,16 @@ html {
 }
 
 .container__btn-dec {
-  width: 6rem;
-  padding: 0.125rem 0.8rem;
+  width: 100%;
+  padding: var(--space-xs) var(--space-sm);
   background-color: var(--primary);
   color: var(--primary-light);
   font-size: 1.5rem;
   font-weight: bold;
   border: none;
   transition: transform 0.1s ease-out;
+
+  flex: 1 1 0;
   
   &:active {
     transform: translateY(2px);
