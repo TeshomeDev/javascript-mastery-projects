@@ -44,7 +44,7 @@ body {
     letter-spacing: -0.5px;
 
     color: var(--text);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, opacity 0.3s ease;
   }
 
 .container__title.active {
