@@ -45,6 +45,7 @@ A button that changes the background randomly on click.
 **Key Insight:**<br>
 - Dynamic behavior makes UI interactive, but structure and clarity make it maintainable.
 
+<br><br>
 
 ### 📌 Project 3: Counter (Incease/Decrease)
 
@@ -65,3 +66,21 @@ A counter application where users can increase or decrease a number with real-ti
 
 **Key insight:**<br>
 - State changes should drive both behavior and user feedback.
+
+<br><br>
+
+### 📌 Project 4: Show / Hide Password
+
+
+**What I built:**<br>
+- A password input field with a toggle button to show or hide the entered password.
+
+**What I learned:**<br>
+
+- How to manage boolean state (isVisible)
+- How to control DOM attributes dynamically (input.type)
+- How to synchronize UI with state changes
+- Importance of keeping logic independent from UI conditions
+
+**Key insight:**<br>
+- UI behavior should always be driven by state, not by DOM conditions.
