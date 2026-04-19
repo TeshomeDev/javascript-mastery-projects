@@ -3,7 +3,7 @@
 
 ## DOM Manipulation
 
-### 📌 Project 1: Change text
+### 📌 Project 1: Toggle text
 
 **What I built:** <br>
 A simple UI where clicking a button changes the heading text and toggles its state.
