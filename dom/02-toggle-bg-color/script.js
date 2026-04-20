@@ -1,20 +1,28 @@
 
-const body = document.querySelector(".container");
+const body = document.body;
 const btn = document.querySelector(".container__btn");
 
-const colors = ["#16a085", "#27ae60", "#2980b9", "#8e44ad", "#2c3e50"];
+let isDarkMoke = false;
 
-function getRandomIndex() {
-  const index = Math.floor(Math.random() * colors.length);
+function applyTheme() {
+  if(isDarkMoke) {
+    body.classList.add("dark");
+    body.classList.remove("light")
+  } else {
+    body.classList.remove("dark");
+    body.classList.add("light");
+  }
 
-  return index;
+  updateBtn();
 }
 
+applyTheme();
 
-function changeBackgroundColor() {
-  const color = colors[getRandomIndex()];
-
-  body.style.backgroundColor = color;
+function updateBtn() {
+  btn.textContent = isDarkMoke ? "Light Mode" : "Dark Mode";
 }
 
-btn.addEventListener("click", changeBackgroundColor);
+btn.addEventListener("click", () => {
+  isDarkMoke = !isDarkMoke;
+applyTheme();
+});
