@@ -2,27 +2,37 @@
 const body = document.body;
 const btn = document.querySelector(".container__btn");
 
-let isDarkMoke = false;
+const themes = {
+  light: {
+    classToAdd: "light",
+    classToRemove: "dark",
+    buttonText: "Dark Mode"
+  },
+  dark: {
+    classToAdd: "dark",
+    classToRemove: "light",
+    buttonText: "Light Mode"
+  }
+}
+
+
+let currentTheme = "light";
 
 function applyTheme() {
-  if(isDarkMoke) {
-    body.classList.add("dark");
-    body.classList.remove("light")
-  } else {
-    body.classList.remove("dark");
-    body.classList.add("light");
-  }
+  const theme = themes[currentTheme];
 
-  updateBtn();
+  body.classList.add(theme.classToAdd);
+  body.classList.remove(theme.classToRemove);
+
+  btn.textContent = theme.buttonText;
+
 }
 
 applyTheme();
 
-function updateBtn() {
-  btn.textContent = isDarkMoke ? "Light Mode" : "Dark Mode";
-}
 
 btn.addEventListener("click", () => {
-  isDarkMoke = !isDarkMoke;
-applyTheme();
+   currentTheme = currentTheme === "light" ? "dark" : "light"; 
+
+    applyTheme();
 });
