@@ -2,30 +2,20 @@
 const body = document.body;
 const btn = document.querySelector(".container__btn");
 
-const themes = {
-  light: {
-    classToAdd: "light",
-    classToRemove: "dark",
-    buttonText: "Dark Mode"
-  },
-  dark: {
-    classToAdd: "dark",
-    classToRemove: "light",
-    buttonText: "Light Mode"
-  }
-}
+let savedTheme = localStorage.getItem("theme");
 
-
-let currentTheme = "light";
+let currentTheme = savedTheme ? savedTheme : "light";
 
 function applyTheme() {
-  const theme = themes[currentTheme];
-
-  body.classList.add(theme.classToAdd);
-  body.classList.remove(theme.classToRemove);
-
-  btn.textContent = theme.buttonText;
-
+  if(currentTheme === "dark") {
+    body.classList.add("dark");
+    body.classList.remove("light");
+    btn.textContent = "Light Theme";
+  } else {
+    body.classList.add("light");
+    body.classList.remove("dark");
+    btn.textContent = "Dark Theme";
+  }
 }
 
 applyTheme();
@@ -33,6 +23,8 @@ applyTheme();
 
 btn.addEventListener("click", () => {
    currentTheme = currentTheme === "light" ? "dark" : "light"; 
+
+   localStorage.setItem("theme", currentTheme);
 
     applyTheme();
 });
