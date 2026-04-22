@@ -4,7 +4,7 @@
   --color-bg-dark: #121212;
 
   --color-text-light: #111;
-  --color-text-dark: #f4f4f4;
+  --color-text-dark: #e5e5e5;
 
   --color-primary: #037ae3;
 
@@ -56,10 +56,14 @@ body.dark {
   font-size: 1.2rem;
   cursor: pointer;
   border-radius: 0.25rem;
-  transition: background-color var(--transition-base);
+  transition: background-color var(--transition-base), transform 0.1s ease;
 }
 
     
 .container__btn:hover {
   background-color: var(--color-btn-bg-hover);
+}
+
+.container__btn:active {
+  transform: scale(0.97);
 }
