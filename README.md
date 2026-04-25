@@ -61,6 +61,30 @@ https://github.com/TeshomeDev/javascript-mastery-projects/tree/main/dom/01-toggl
 
 ---
 
+
+### 📌Project 3: Counter System
+
+**What I built:**
+A stste-driven counter system that supports increment, decrement and reset actions with consistent UI updates.
+
+**Key Concepts:**
+- Event delegation for scalable interaction handling
+- Data-driven UI using `data-*` attributes
+- Centralized UI rendering with a single update function
+- Constraint handling (preventing invalid state)
+- UI feedback and interaction clarity
+
+**Key Insight:**
+Asystem should be driven by state, not by direct UI manipulation.
+
+🔗 Live:
+https://teshomedev.github.io/javascript-mastery-projects/dom/03-counter/index.html
+
+💻 Code:
+https://github.com/TeshomeDev/javascript-mastery-projects/tree/main/dom/03-counter
+
+---
+
 ## 🧠 What I am focusing on
 
 - State-driven UI design
@@ -69,7 +93,6 @@ https://github.com/TeshomeDev/javascript-mastery-projects/tree/main/dom/01-toggl
 - UI perception and interaction feedback
 - Building systems, not just features
 
----
 
 ## 📌 Goal
 
