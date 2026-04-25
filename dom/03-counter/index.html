@@ -8,13 +8,19 @@
 </head>
 <body>
   <main class="container">
+    <h1 class="container__title">Counter System</h1>
     <div class="container__content">
-      <h1 class="container__title">Current count</h1>
+      <h2 class="container__content-title">Current value</h2>
       <span class="container__current-value"></span>
-      <div class="container__counter-btn">
-        <button class="container__btn container__btn-inc">+</button>
-        <button class="container__btn container__btn-dec">-</button>
+      <div class="container__actions">
+        <div class="container__counter-btn">
+          <button class="container__btn container__btn-inc" data-action="increment">+</button>
+          <button class="container__btn container__btn-dec" data-action="decrement">-</button>
+        </div>
+        
+        <button class="container__btn-reset" data-action="reset">Reset</button>
       </div>
+      
     </div>
   </main>
   <script src="script.js"></script>
