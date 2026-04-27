@@ -141,9 +141,13 @@ h1 {
   color: var(--on-accent);
   font-weight: 700;
 
-  
-  transition: transform 0.1s ease-out;
-  width: 40%;
+  cursor: pointer;
+  transition: transform 0.1s ease-out, background-color 0.3s ease;
+  width: 50%;
+}
+
+.hideshow-container__btn:hover {
+  background-color: hsl(var(--accent-h), 70%, 35%);
 }
 
 .hideshow-container__btn:active {
