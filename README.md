@@ -85,15 +85,37 @@ https://github.com/TeshomeDev/javascript-mastery-projects/tree/main/dom/03-count
 
 ---
 
-## 🧠 What I am focusing on
 
-- State-driven UI design
-- DOM manipulation fundamentals
-- Persistent state handling
-- UI perception and interaction feedback
-- Building systems, not just features
+###📌 Project 4: Toggle Password Visibility
 
+**What I built:**
+A password visibility toggle system using state-driven logic and accessible UI updates.
+
+**Key Concepts:**
+- Binary state system (`visible / hidden`)
+- Data-action pattern for interaction handling
+- Centralized UI rendering 
+- Accessibility with `aria-pressed`
+- Consistent UI feedback
+
+**Key Insight:**
+A UI system is a flow: event → action → state → render.
+
+🔗 Live:
+https://teshomedev.github.io/javascript-mastery-projects/dom/04-toggle-password-visibility/index.html
+
+💻 Code:
+https://github.com/TeshomeDev/javascript-mastery-projects/tree/main/dom/04-toggle-password-visibility
+
+---
+
+## 🧠 Overall Learning
+
+- State is the single source of truth
+- UI is a reflection of state
+- Events trigger actions, not direct UI changes
+- Consistency creates scalable systems
 
 ## 📌 Goal
 
-To master JavaScript by building structured projects from basic → advanced with a focus on engineering thinking.
+Building  intuition for real-world frontend engineering through small, composable systems.
