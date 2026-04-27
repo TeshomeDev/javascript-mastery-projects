@@ -12,11 +12,19 @@
 <body>
   <main class="container">
     <div class="container__content">
-      <h1 class="container__title">Hide/Show Password</h1>
+      <h1 class="container__title">Toggle Password Visibility</h1>
       <div class="hideshow-container">
         <label for="password">Password: </label>
-        <input type="password" id="password" minlength="6" maxlength="8" class="hideshow-container__input">
-        <button class="hideshow-container__btn" aria-label="Toggle password visibility" aria-pressed="false">Show</button>
+        <input 
+        type="password" 
+        id="password" placeholder="Enter password..." minlength="6" 
+        maxlength="8" 
+        class="hideshow-container__input">
+        <button 
+        class="hideshow-container__btn" 
+        aria-label="Toggle password visibility" aria-pressed="false"
+        data-action="toggle-visibility"
+        >Show</button>
       </div>
     </div>
   </main>

@@ -19,9 +19,9 @@
 
 
   --text-1: var(--font-base);
-  --text-2: calc(var(--font-base) / 1.25);
-  --text-3: calc(var(--font-base) * 1.25);
-  --text-4: calc(var(--text-3) * 1.25);
+  --text-2: calc(var(--font-base) / 1.2);
+  --text-3: calc(var(--font-base) * 1.2);
+  --text-4: calc(var(--text-3) * 1.2);
 
   --space-1: var(--space-unit);
   --space-2: calc(var(--space-unit) * 2);
@@ -73,6 +73,7 @@ body {
 h1 { 
   font-size: var(--text-lg);
   line-height: 1.2;
+  letter-spacing: 0.1px;
 }
 
 .container {

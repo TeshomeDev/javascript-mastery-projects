@@ -3,11 +3,13 @@ const input = document.querySelector(".hideshow-container__input");
 const btn = document.querySelector(".hideshow-container__btn");
 
 
-let isVisible = false;
+let passwordVisibility = "hidden";
 
 function updateUI() {
 
-  if(isVisible) {
+  const isVisibile = passwordVisibility === "visible";
+
+  if(isVisibile) {
     input.type = "text";
     btn.textContent = "Hide";
     
@@ -16,14 +18,24 @@ function updateUI() {
     btn.textContent = "Show";
   }
   
+  btn.setAttribute("aria-pressed", passwordVisibility === "visible");
+
+  btn.style.transform = "scale(0.98)";
+
+  setTimeout(() => {
+    btn.style.transform = "scale(1)";
+  }, 100);
 }
 
 updateUI();
 
-btn.addEventListener("click", () => {
+btn.addEventListener("click", (e) => {
+  const action = e.target.dataset.action;
 
-  isVisible = !isVisible;
-  
+  if(action === "toggle-visibility") {
+    passwordVisibility = passwordVisibility === "hidden" ? "visible" : "hidden";
+  }  
+
     updateUI();
   
 });
