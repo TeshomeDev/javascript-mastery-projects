@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+    <article class="card">
+      <h1 class="card__title">Live Character Counter</h1>
+      <form class="card__content">
+        <div class="input">
+          <label for="msg" class="card__label">Write your feedback with 100 characters: </label>
+          <textarea name="message" id="msg" class="text-input" cols="25" rows="4" placeholder="Your feedback..."></textarea>
+        </div>
+        
+        <p class="char-count">0 / 100 characters</p>
+        <p class="feedback"></p>
+        <button type="submit">Send</button>
+      </form>
+    </article>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
