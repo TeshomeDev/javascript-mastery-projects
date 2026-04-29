@@ -11,23 +11,32 @@ function updateUI() {
     text = text.slice(0, MAX_LIMIT);
     textarea.value = text;
   }
-
   const count = text.length;
   const isOverLimit = count >= MAX_LIMIT;
   const remaining = MAX_LIMIT - count;
 
+  const isNearLimit = remaining <= 10 && remaining > 0;
+
+  feedback.classList.remove("feedback--warning", "feedback--limit");
+
+  if(isOverLimit) {
+    feedback.classList.add("feedback--limit");
+  } else if(isNearLimit) {
+    feedback.classList.add("feedback--warning");
+  }
+
   countDisplay.textContent = `${count} / ${MAX_LIMIT} characters`;
 
     feedback.textContent = isOverLimit 
-    ? "Limit reached" 
+    ? "Maximum reached" 
     : `${remaining} characters remaining`;
 
-    const color = isOverLimit 
-    ? "red" 
-    : "inherit";
+    // const color = isOverLimit 
+    // ? "red" 
+    // : "inherit";
 
-    feedback.style.color = color;
-    countDisplay.style.color = color;
+    // feedback.style.color = color;
+    // countDisplay.style.color = color;
 }
 
 updateUI();
