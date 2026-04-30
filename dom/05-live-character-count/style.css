@@ -1,16 +1,20 @@
 :root {
---space-unit: 0.25rem;
+  --space-unit: 0.25rem;
 
---font-base: clamp(1rem, 0.5rem + 0.8vw, 1.5rem);
+  --font-base: clamp(1rem, 0.5rem + 0.8vw, 1.5rem);
 
   --h: 210;
   --s: 70%;
+
+  --warning-h: 0;
 
   --primary: hsl(var(--h), var(--s), 50%);
   --primary-light: hsl(var(--h), var(--s), 98%);
   --primary-dark: hsl(var(--h), 8%, 30%);
   --surface: hsl(var(--h), var(--s), 94%);
-  --surface-br: hsl(var(--h), var(--s), 85%);
+  --surface-br: hsl(var(--h), var(--s), 85%); 
+
+  --color-warning: hsl(var(--warning-h), 80%, 50%);
 
   --accent-h: 210;
   --accent: hsl(var(--accent-h), 70%, 40%);
@@ -30,10 +34,13 @@
   --surface-bg: var(--surface);
   --surface-border: var(--surface-br);
 
+  --color-limit-warning: var(--color-warning);
+
   --text-color-primary: var(--primary);
   --text-color-dark: var(--primary-dark);
 
   --text-base: var(--font-base);
+  --text-xs: calc(var(--font-base) / 1.4);
   --text-sm: calc(var(--font-base) / 1.2);
   --text-md: calc(var(--text-sm) * 1.2);
   --text-lg: calc(var(--text-md) * 1.2);
@@ -96,7 +103,7 @@ h1 {
 }
 
 .card {
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
 
   padding: var(--space-lg);
@@ -145,9 +152,33 @@ h1 {
   outline: 1px solid var(--primary);
 }
 
+.feedback-note {
+  font-size: var(--text-xs);
+
+  padding: var(--space-xs) var(--space-sm);
+
+  background-color: var(--main-bg);
+  border: 1px solid var(--surface-border);
+  border-left: 2px solid var(--primary);
+
+  display: inline-flex;
+  gap: var(--space-sm);
+}
+
+.feedback-note::before {
+  content: "Note:";
+  color: var(--accent);
+
+  font-weight: 600;
+}
+
 .feedback {
   font-size: var(--text-sm);
   color: var(--text-color-dark);
+}
+
+.max--limit {
+  color: var(--color-limit-warning);
 }
 
 .feedback--warning {

@@ -12,11 +12,17 @@
   <main class="container">
     <article class="card">
       <h1 class="card__title">Live Character Counter</h1>
-      <form class="card__content">
+      <form 
+      class="card__content"
+      action="https://formspree.io/f/xnjjovjv"
+      method="POST"
+      novalidate>
+      
         <div class="input">
           <label for="msg" class="card__label">Write your feedback with 100 characters: </label>
           <textarea name="message" id="msg" class="text-input" cols="25" rows="4" placeholder="Your feedback..."></textarea>
         </div>
+        <p class="feedback-note">Your message will be sent directly. I read every feedback personally.</p>
         
         <p class="char-count">0 / 100 characters</p>
         <p class="feedback"></p>
