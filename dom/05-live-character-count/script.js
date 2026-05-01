@@ -31,7 +31,7 @@ function updateUI() {
 
     feedback.textContent = isOverLimit 
     ? "Maximum reached" 
-    : `${remaining} characters remaining`;
+    : `${remaining} character${remaining === 1 ? "" : "s"} remaining`;
 
     // const color = isOverLimit 
     // ? "red" 
