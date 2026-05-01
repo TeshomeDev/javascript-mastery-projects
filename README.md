@@ -109,12 +109,32 @@ https://github.com/TeshomeDev/javascript-mastery-projects/tree/main/dom/04-toggl
 
 ---
 
-## 🧠 Overall Learning
+### 📌 Project 5: Live Character Counter
 
-- State is the single source of truth
-- UI is a reflection of state
-- Events trigger actions, not direct UI changes
-- Consistency creates scalable systems
+**What I built:**
+A real-time character counter system with limit enforcement, dynamic feedback, and actual message submission using Formspree.
+
+**Features:**
+- Live character count updates
+- Character limit enforcement(100 characters)
+- Dynamic feedback with plural-aware messaging
+- Visual warning when limit is reached
+- Real feedback submission via Formspree
+
+**Key Concepts:**
+- State-driven UI (`count`, `remaining`, `isOverLimit`)
+- Real-time input handling (`input` event)
+- Centralized UI rendering
+- Edge-case handling (limit & pluralization)
+
+**Key Insight:**
+UI is not just reactive - it should guide the user with clear constraints and meaningful feedback.
+
+🔗 Live: https://teshomedev.github.io/javascript-mastery-projects/dom/05-live-character-count/index.html
+
+💻 Code: https://github.com/TeshomeDev/javascript-mastery-projects/tree/main/dom/05-live-character-counter
+
+---
 
 ## 📌 Goal
 
