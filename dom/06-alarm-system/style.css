@@ -109,7 +109,7 @@ body {
 
   overflow: hidden;
 
-  padding: var(--space-lg);
+  padding: var(--space-md);
 
   position: relative;
   z-index: 10;
@@ -144,7 +144,6 @@ body {
 
 .card__content {
   width: 100%;
-  padding: var(--space-sm);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -222,8 +221,11 @@ body {
 }
 
  .alarm-feedback {
+  width: 60%;
   font-size: var(--text-sm);
   color: var(--text-color-dark);
+
+  white-space: wrap;
 }
 
 .alarm-time__container,
@@ -233,6 +235,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  gap: var(--space-md);
 }
 
 
