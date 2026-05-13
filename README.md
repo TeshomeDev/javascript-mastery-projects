@@ -136,6 +136,43 @@ UI is not just reactive - it should guide the user with clear constraints and me
 
 ---
 
+### 📌 Project 6: Alarm System
+
+**What I built:**
+A real-time alarm system that allows users to set alarms, continuously monitors current time, triggers alarm feedback with looping audio and manages the full alarm lifecycle through dynamic UI updats and state-driven logic.
+
+**Features:**
+- Real-time current clock display
+- Set alarm using time input
+- Alarm monitoring with continuous checking
+- Triggered alarm feedback with looping ringtone
+- Stop triggered alarm interaction
+- Delete active alarm before trigger
+- Dynamic button creation and cleanup
+- Active feedback UI states
+- Responsive card-based interface
+
+**Key Concepts:**
+- State-driven architecture
+- Data → Actions → Render flow
+- Alarm lifecycle management
+- Continuous monitoring with `setInterval()`
+- Time normalization and comparison
+- Guard clauses for state protection
+- Dynamic DOM creation and cleanup
+- Event-driven UI interactions
+- Audio object control with JavaScript
+- Separation of concerns 
+- Persistent and temporary state
+- Conditional rendering patterns
+
+**Key Insight:**
+Interactive systems are built by continuously monitoring state, reacting to conditions, and syncronizing UI behavior with application lifecycle changes
+
+🔗 Live: https://teshomedev.github.io/javascript-mastery-projects/dom/06-alarm-system/index.html
+
+💻 Code: https://github.com/TeshomeDev/javascript-mastery-projects/tree/main/dom/06-alarm-system
+
 ## 📌 Goal
 
 Building  intuition for real-world frontend engineering through small, composable systems.
