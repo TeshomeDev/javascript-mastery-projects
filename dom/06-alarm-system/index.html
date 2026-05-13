@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alarm System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+    
+    <article class="card">
+      <h2 class="card__title">Alarm System</h2>
+
+      <div class="card__content">
+        <div class="content-img">
+          <i class="fa-solid fa-bell fa-2x"></i>
+        </div>
+
+        <div class="content-alarm">
+          <div class="alarm-time__container">
+            <p class="alarm-time">
+              <span class="alarm-time__label"></span>
+              <span class="alarm-time__time"></span>
+            </p>
+          </div>
+          
+          
+          <form action="" class="alarm-form">
+            <input type="time" class="alarm-form__input">
+            <button type="submit" class="alarm-form__btn">Set alarm</button>
+          </form>
+          
+          <div class="current-time-container">
+            <p class="current-time__label">Current time: <span class="current-time__display"></span></p>
+          </div>
+          
+          <div class="alarm-feedback__container">
+            <p class="alarm-feedback"></p>
+          </div>
+
+        </div>
+        
+      </div>      
+
+      <div class="card__badge">
+        <span class="card__badge-info">In Progress</span>
+        <div class="badge-pole"></div>
+      </div>
+    </article>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
