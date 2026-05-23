@@ -146,6 +146,7 @@
 
     .info a:hover {
       text-decoration: underline;
+      text-underline-offset: 0.5rem;
     }
 
     .close {
@@ -239,18 +240,27 @@
 
   <script>
     const modal = document.querySelector(".modal-overlay");
-
-  
-      window.addEventListener("DOMContentLoaded", () => {
-        setTimeout(() => {
-          modal.classList.add("show");
-        }, 2000);
-      });
-
     const close = document.querySelector(".close");
+
+
+      window.addEventListener("DOMContentLoaded", () => {
+
+        const hasSeenModal = sessionStorage.getItem("portfolioModalSeen");
+
+        if(!hasSeenModal) {
+          setTimeout(() => {
+            modal.classList.add("show");
+          }, 2000);
+
+          sessionStorage.setItem("portfolioModalSeen", "true");
+        }
+      });
+    
 
     close.addEventListener("click", () => {
       modal.classList.remove("show");
+
+      sessionStorage.setItem("portfolioModalSeen", "true");
     });
 
   </script>
