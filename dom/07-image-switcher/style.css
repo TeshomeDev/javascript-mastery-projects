@@ -147,7 +147,8 @@ button {
   text-transform: uppercase;
   opacity: 0.9;
 
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
 
   color: var(--text-color-dark);
 }
@@ -172,7 +173,7 @@ button {
 
   display: flex;
   flex-direction: column;
-  gap: calc(var(--space-lg) * 1.5);
+  gap: calc(var(--space-lg) * 1.6);
 }
 
 .active-image-wrapper {
@@ -353,6 +354,6 @@ button {
 
 @media (max-width: 768px) {
   .image-switcher-container {
-    gap: calc(var(--space-lg) * 4);
+    gap: calc(var(--space-lg) * 1.2);
   }
 }
