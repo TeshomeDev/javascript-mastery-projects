@@ -6,7 +6,7 @@ const button = document.querySelector(".container__btn-toggle");
 let isUpdated = false;
 
 function toggleText() {
-  title.computedStyleMap.opacity = "0.5";
+  title.style.opacity = "0";
 
   setTimeout(() => {
     if(isUpdated) {
@@ -23,8 +23,8 @@ function toggleText() {
       isUpdated = true;
   }
 
-  title.computedStyleMap.opacity = "1";
-  }, 250);
+  title.style.opacity = "1";
+  }, 300);
 }
 
 button.addEventListener("click", toggleText);
