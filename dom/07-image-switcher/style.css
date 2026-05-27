@@ -156,7 +156,7 @@ button {
 .container::before {
   content: "";
   position: absolute;
-  inset: -10%;
+  inset: 0;
 
   background: radial-gradient(
     circle at 50% 10%,
@@ -354,6 +354,10 @@ button {
 
 @media (max-width: 768px) {
   .image-switcher-container {
-    gap: calc(var(--space-lg) * 1.2);
+    gap: calc(var(--space-lg) * 3);
+  }
+
+  .image-switcher {
+    justify-content: flex-start;
   }
 }
